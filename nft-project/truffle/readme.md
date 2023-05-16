@@ -77,7 +77,7 @@ To interact with the smart contract deployed in the ganache network, first run f
 ```sh
 truffle console --network ganache
 ```
-This will open an interactive javascript console. For interacting with the smart contract, you can use the [web3js](https://web3js.readthedocs.io/en/v1.10.0/). For example:
+This will open an interactive javascript console. For interacting with the smart contract, you can use [web3js](https://web3js.readthedocs.io/en/v1.10.0/). For example:
 ```sh
 truffle(ganache)> const spacebear = await Spacebear.deployed()
 trufffle(ganache)> spacebear.name()
@@ -108,7 +108,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Acknowledgments
 [Read-me File Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md?plain=1)   
 [openzepellin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master)  
-[Thomas Wiesner](https://ethereum-blockchain-developer.com/000-introduction/01-your-instructor/)
+Instructor👨‍🏫: [Thomas Wiesner](https://ethereum-blockchain-developer.com/000-introduction/01-your-instructor/)
 
 
 ## Contacts
