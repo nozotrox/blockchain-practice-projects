@@ -12,6 +12,9 @@ This is a simple project that has the following requirements:
 ### Built With
 * Solidity
 
+### Run With
+* Remix
+
 
 <!-- GETTING STARTED -->
 ### Getting Started

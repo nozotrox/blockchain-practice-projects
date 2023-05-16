@@ -7,6 +7,9 @@ This is a simple expample of and ERC20 Token Implementation. It inherits the ERC
 ### Built With
 * Solidity
 
+### Run With
+* Remix
+
 
 <!-- GETTING STARTED -->
 ### Getting Started
@@ -33,9 +36,9 @@ Don't forget to give the project a star! Thanks again!
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
-### Acknowledgments
-[Read-me File Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md?plain=1)
-
+## Acknowledgments
+[Read-me File Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md?plain=1)   
+Instructor👨‍🏫: [Thomas Wiesner](https://ethereum-blockchain-developer.com/000-introduction/01-your-instructor/)
 
 ### Contacts
 [![@nozotrox][Twitter-badge]](https://twitter.com/nozotrox)   

@@ -7,6 +7,9 @@ This is smart contract that exemplifies a token sale, i.e, exchange currency, in
 ### Built With
 * Solidity
 
+### Run With
+* Remix
+
 
 <!-- GETTING STARTED -->
 ### Getting Started
@@ -43,13 +46,13 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- License -->
-### License
+## License
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
-### Acknowledgments
+## Acknowledgments
 [Read-me File Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md?plain=1)   
-[Openzepellin - ERC20 Smart Contract](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+Instructor👨‍🏫: [Thomas Wiesner](https://ethereum-blockchain-developer.com/000-introduction/01-your-instructor/)
 
 
 ### Contacts

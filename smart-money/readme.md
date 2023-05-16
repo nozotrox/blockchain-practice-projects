@@ -10,6 +10,9 @@ This is a simple project that has the following requirements:
 ### Built With
 * Solidity
 
+### Run With
+* Remix
+
 
 <!-- GETTING STARTED -->
 ### Getting Started
@@ -32,13 +35,13 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- License -->
-### License
+## License
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
-### Acknowledgments
-[Read-me File Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md?plain=1)
-
+## Acknowledgments
+[Read-me File Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md?plain=1)   
+Instructor👨‍🏫: [Thomas Wiesner](https://ethereum-blockchain-developer.com/000-introduction/01-your-instructor/)
 
 ### Contacts
 [![@nozotrox][Twitter-badge]](https://twitter.com/nozotrox)   
