@@ -37,8 +37,6 @@ sudo apt install npm
 To install `foundry`, run the following commands:
 ```sh
 curl -L https://foundry.paradigm.xyz | bash
-source ~/.bashrc 
-foundryup
 ```
 ```sh
 source ~/.bashrc 
