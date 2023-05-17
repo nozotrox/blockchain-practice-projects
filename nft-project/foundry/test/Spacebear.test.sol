@@ -5,6 +5,8 @@ import "openzeppelin-contracts/contracts/token/ERC721/ERC721.sol";
 import "openzeppelin-contracts/contracts/access/Ownable.sol";
 import "openzeppelin-contracts/contracts/utils/Counters.sol";
 
+import "openzeppelin-contracts/contracts/utils/Strings.sol";
+
 contract Spacebear is ERC721, Ownable {
     using Counters for Counters.Counter;
 
@@ -42,6 +44,6 @@ contract Spacebear is ERC721, Ownable {
         override(ERC721)
         returns (string memory)
     {
-        return string(abi.encodePacked(_baseURI(),"_",tokenId+1,".json"));
+        return string(abi.encodePacked(_baseURI(),"spacebear_",Strings.toString(tokenId+1),".json"));
     }
 }
