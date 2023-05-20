@@ -1,4 +1,4 @@
-# blockchain-practice-projects
+# Web3 Practice Projects (Blockchain Development with Solidity)
 These are blockchain practice projects that I've made during my training for web3 dev. These projects use the following tools🛠️ and/or languages:   
 * Solidity
 * Truffle
@@ -7,6 +7,10 @@ These are blockchain practice projects that I've made during my training for web
 * Foundry
 
 Dive into the folders to see the full descriptions in each `readme.md` file.
+
+# Highlight Projects (so-far)😉
+<center><img src="./erc20-token-sale/images/starducks.png" /></center>
+<small> This is project which used multiple technologies/tools, such as: <b>Solidity, Reactjs, Ganache, Metamask</b></small>
 
 <!-- CONTACT -->
 ## Contributing
