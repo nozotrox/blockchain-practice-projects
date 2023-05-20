@@ -19,7 +19,7 @@ module.exports = {
     },
     sepolia: {
       provider: () => new HDWalletProvider(MNEMONIC, `https://mainnet.infura.io/v3/${PROJECT_ID}`, MetaMaskAccountIndex),
-      network_id: 11155111,
+      network_id: 1,
     },
     
   },
