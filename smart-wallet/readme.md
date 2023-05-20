@@ -3,7 +3,7 @@
 This is a simple project that has the following requirements:
 1. The wallet has one owner
 2. The wallet should be able to receive funds, no matter what
-3. It is possible for the owner to spend funds on any kind of address, no matter if its a so-called Externally Owned Account (EOA - with a private key), or a Contract Address.
+3. It is possible for the owner to spend funds on any kind of address, no matter if it's a so-called Externally Owned Account (EOA - with a private key), or a Contract Address.
 4. It should be possible to allow certain people to spend up to a certain amount of funds.
 5. It should be possible to set the owner to a different address by a minimum of 3 out of 5 guardians, in case funds are lost.
 
@@ -18,25 +18,25 @@ This is a simple project that has the following requirements:
 
 <!-- GETTING STARTED -->
 ### Getting Started
-For this project, there is no initial setup required. To test, copy the code and paste int on [Remix IDE](https://remix.ethereum.org/). Deploy the smart contract and... Happy Testing🪲
+For this project, there is no initial setup required. To test, copy the code and paste it on [Remix](https://remix.ethereum.org/) IDE](https://remix.ethereum.org/). Deploy the smart contract and... Happy Testing🪲
 
 
 <!-- CONTACT -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 ### Roadmap
-- [ ] Fix the double voting vulnerability
+- [ ] Fix the double-voting vulnerability
 
 <!-- License -->
 ### License
@@ -44,7 +44,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 ### Acknowledgments
-[Read-me File Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md?plain=1)
+[Readme File Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md?plain=1)
 
 
 ### Contacts
