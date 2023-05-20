@@ -1,4 +1,6 @@
 <!-- REQUIREMENTS -->
+
+<center><img src="./images/starducks.png"/></center>
 ### ABOUT THE EXERCISE/PRACTICE PROJECT
 This is an asset tokenization project built with the following use-cases:
 💰 Tokenization of any Assets as fungible Tokens (ERC20)   
@@ -11,7 +13,6 @@ This example project was built with the following purpose:
 🤖 Understand deployment of dApps
 🦸‍♂️ Understand Tokenization using Open-Zeppelin Smart Contracts
 ☑️ Deeper dive into Unit-Testing
-
 
 <!-- BUILT WITH -->
 ### Built With

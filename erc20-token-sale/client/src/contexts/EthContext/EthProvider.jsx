@@ -6,10 +6,33 @@ import { reducer, actions, initialState } from "./state";
 function EthProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+
+  const updateUserTokens = async (contracts, web3) => { 
+    //::: For fixed amount tokens sale use:
+    //: let userTokens = await contracts.myToken.methods.balanceOf(accounts[0]).call();
+    const accounts = await web3.eth.requestAccounts();
+    const userTokens = await contracts.myMintableToken.methods.balanceOf(accounts[0]).call();
+    const totalSupply = await contracts.myMintableToken.methods.totalSupply().call();
+    dispatch({
+      type: actions.update_user_token,
+      data: userTokens
+    });
+    dispatch({
+      type: actions.update_total_suppy,
+      data: totalSupply
+    });
+  }
+
+  const listenToTokenTransferEvent = useCallback(async (contracts, web3) => { 
+     //::: For fixed amount tokens sale use:
+    //: contracts.myToken.events.Transfer({to: accounts[0]}).on("data", () => updateUserTokens(contracts, accounts));
+    contracts.myMintableToken.events.Transfer().on("data", () => updateUserTokens(contracts, web3));
+  },[])
+
+  
   const init = useCallback(
     async artifacts => {
       if (artifacts) {
-        // console.debug(Web3.givenProvider);
         const web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
         const accounts = await web3.eth.requestAccounts();
         const networkID = await web3.eth.net.getId();
@@ -52,10 +75,11 @@ function EthProvider({ children }) {
           type: actions.init,
           data: { artifacts, web3, accounts, networkID, contracts, tokenSaleAddress:my_mintable_token_sale.networks[networkID].address}
         });
-        listenToTokenTransferEvent(contracts, accounts);
+        listenToTokenTransferEvent(contracts, web3);
         updateUserTokens(contracts, accounts);
       }
-    }, []);
+    }, [listenToTokenTransferEvent]);
+
 
   useEffect(() => {
     const tryInit = async () => {
@@ -83,27 +107,7 @@ function EthProvider({ children }) {
     tryInit();
   }, [init]);
 
-
-  const updateUserTokens = async (contracts, accounts) => { 
-    // let userTokens = await contracts.myToken.methods.balanceOf(accounts[0]).call();
-    const userTokens = await contracts.myMintableToken.methods.balanceOf(accounts[0]).call();
-    const totalSupply = await contracts.myMintableToken.methods.totalSupply().call();
-    dispatch({
-      type: actions.update_user_token,
-      data: userTokens
-    });
-    dispatch({
-      type: actions.update_total_suppy,
-      data: totalSupply
-    });
-  }
-
-  const listenToTokenTransferEvent = (contracts, accounts) => { 
-    // contracts.myToken.events.Transfer({to: accounts[0]}).on("data", () => updateUserTokens(contracts, accounts));
-    contracts.myMintableToken.events.Transfer({to: accounts[0]}).on("data", () => updateUserTokens(contracts, accounts));
-  }
-
-
+  
   useEffect(() => {
     const events = ["chainChanged", "accountsChanged"];
     const handleChange = () => {

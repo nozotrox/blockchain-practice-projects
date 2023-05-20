@@ -1,9 +1,7 @@
 import useEth from "../../contexts/EthContext/useEth";
-import Title from "./Title";
 import NoticeNoArtifact from "./NoticeNoArtifact";
 import NoticeWrongNetwork from "./NoticeWrongNetwork";
 import { useState } from "react";
-import { actions } from "../../contexts/EthContext/state"
 
 function Demo() {
   const { state } = useEth();
@@ -24,7 +22,8 @@ function Demo() {
 
   const handleKycSubmit = async () => {
     const { kycAddress } = formState;
-    await kycContract.methods.setKycCompleted(kycAddress).send({from: state.accounts[0]});
+    const accounts = await state.web3.eth.requestAccounts();
+    await kycContract.methods.setKycCompleted(kycAddress).send({from: accounts[0]});
     alert("Account "+kycAddress+" is now whitelisted");
   }
 
@@ -42,17 +41,26 @@ function Demo() {
 
   return (
     <div className="demo">
-      <Title />
+      <center>
+        <h1 className="title">StarDucks</h1>
+        <span className="subtitle">The best Cappucino Token in Town</span><br></br>
+        <span className="sub_subtitle">Whitelist your address so you can buy our tasty Cappucino at your near Starducks.</span>
+      </center>
       { failedConfig? failedConfigOutput : (
         <>
-        <h5>Total Supply: {state.total_supply}</h5>
+        <center><span id="totalSupply">Total Supply: {state.total_supply}</span> <p>Your current balance: {state.userTokens}</p></center>
+        
+        <div className="inpub_box">
           <h2>Enable your account</h2>
-        Address to allow: <input type="text" name="kycAddress" value={formState.kycAddress} onChange={e => handleInputChange(e)} />
-        <button type="button" onClick={e => handleKycSubmit(e)}>Add Address to Whitelist</button>
-        <h2>Buy Cappucino-Tokens</h2>
-        <p>Send Ether to this address: {state.tokenSaleAddress}</p>
-        <p>You currently have: {state.userTokens}</p>
-        <button type="button" onClick={e => handleBuyTokens()}>Buy Tokens</button>
+          <div>
+            <input type="text" name="kycAddress" value={formState.kycAddress} onChange={e => handleInputChange(e)} placeholder="Enter address to allow" />
+            <button type="button" className="button" onClick={e => handleKycSubmit(e)}>Add Address to Whitelist</button>
+          </div>
+        </div>
+        <span className="separate"></span>
+        <h1>Buy Cappucino-Tokens</h1>
+        <button type="button" className="button buytoken_button" onClick={e => handleBuyTokens()}>Buy Tokens</button> 
+        <p className="small_text">Or send Ether to this address: <span className="pill">{state.tokenSaleAddress}</span></p>
         </>
       )
       }

@@ -1,8 +1,151 @@
 html {
   font-size: 10px;
   font-family: sans-serif;
+  background-color: #FFF9EA;
 }
 
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #542908;
+}
+
+/* body::before {
+  content: "";
+  background-image: url('../assets/images/pattern.jpg');
+  position: absolute;
+  background-repeat: repeat;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.08;
+} */
+
+@font-face {
+  font-family: "GrandHotel";
+  src: url(../assets/fonts/GrandHotel-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Cookie";
+  src: url(../assets/fonts/Cookie-Regular.ttf);
+}
+
+h1 {
+  font-family: "Cookie";
+  color: #482307;
+}
+
+.title {
+  font-size: 54pt;
+}
+
+.subtitle {
+  font-size: 24pt;
+  font-weight: bold;
+  color: #A1724E;
+}
+
+.sub_subtitle {
+  color: #A1724E;
+  font-size: 14pt;
+  font-weight: 400;
+}
+
+.button {
+  color: white;
+  background-color: #E15549;
+  display: inline-block;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0 .5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.inpub_box { 
+  background-color: #542908;
+  border-radius: 5px;
+  margin: 2rem auto;
+}
+
+.inpub_box div { 
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inpub_box h2 { 
+  color: white;
+  padding: 1rem;
+  background-color: #482307;
+  border-radius: 5px 5px 0 0 ;
+}
+
+input[type="text"] { 
+  background-color: #eba254fd;
+  width: 60%;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  border-radius: 2px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #482307;
+  font-weight: bold; 
+}
+
+input[type="text"]::placeholder { 
+  color: #90460d;
+}
+
+input[type="text"]::-ms-input-placeholder { 
+  color: #90460d;
+}
+
+button:hover { 
+  cursor: pointer;
+}
+
+#totalSupply {
+  display: inline-block;
+  color: white;
+  background-color: #482307;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18pt;
+  margin: 4rem auto;
+
+}
+
+.buytoken_button { 
+  margin: 2rem 0 0 0;
+  padding: 1rem 5rem;
+  font-size: 18pt;
+}
+
+.small_text { 
+  font-size: 10pt;
+}
+
+.pill {
+  background-color: #A1724E;
+  color: white;
+  padding: .3rem;
+  border-radius: 4px;
+}
+
+.separate { 
+  margin: 4rem 0;
+  display: inline-block;
+}
+
+footer h2 { 
+  color: #482307;
+}
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +164,7 @@ html {
   --gray: #999;
   --light-gray: #e0e0e0;
   --dark-gray: #777;
+
 }
 
 #App .container {
@@ -119,7 +263,7 @@ hr {
   border-radius: 0 1rem 1rem 0;
 }
 
-#App .container .demo .contract-container .btns > * {
+#App .container .demo .contract-container .btns>* {
   width: 12rem;
   display: flex;
   align-items: center;
@@ -132,7 +276,7 @@ hr {
   cursor: pointer;
 }
 
-#App .container .demo .contract-container .btns > *:hover {
+#App .container .demo .contract-container .btns>*:hover {
   background-color: var(--dark-gray);
 }
 
