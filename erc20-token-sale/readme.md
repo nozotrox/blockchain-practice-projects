@@ -6,6 +6,12 @@ This is an asset tokenization project built with the following use-cases:
 💲 Creation of a new crypto currency   
 🧾 Creation of a Payment-layer on top of Ethereum  
 
+This example project was built with the following purpose:
+🧰 Understand truffle-config json file
+🤖 Understand deployment of dApps
+🦸‍♂️ Understand Tokenization using Open-Zeppelin Smart Contracts
+☑️ Deeper dive into Unit-Testing
+
 
 <!-- BUILT WITH -->
 ### Built With
@@ -15,11 +21,12 @@ This is an asset tokenization project built with the following use-cases:
 ### Run With
 * Truffle
 * Ganache
-
+* Metamask
 
 <!-- GETTING STARTED -->
 ## Getting Started
 For this project, there is a set of tools required to run the project. Follow the instructions in the following sections to get it all setup.
+This project was build following [this instructions](https://ethereum-blockchain-developer.com/060-tokenization/12-metamask-deployment/). Some of the steps given here, show how to run the project.
 
 ### Prerequisites
 To run the project, you'll need to have `node`(v12 or later)  & `npm` installed. 
@@ -39,6 +46,8 @@ sudo apt install node
 sudo apt install npm
 ```
 
+Also, to test this project you'll need a [Metamask](https://metamask.io/) account set up.
+
 ### Install Truffle
 To install `truffle`, run the following command:
 ```sh
@@ -47,48 +56,22 @@ sudo npm install -g truffle
 This will install truffle in your global npm directory.
 
 ### Running the project
-Before starting the project, run the following commands:
+Before starting the project, run the following commands in the `client` and `truffle` folders:
 ```sh
 npm install
 ```
-```sh
-truffle compile
-```
-```sh
-truffle develop
-```
-This command will spawn an interactive console where you can type commands. Type the following command:
-```sh
-> migrate
-```
-After running this command, the nft smart contract will run in the truffle development blockchain environment. But we can run this on a different blockchain network, for example, [ganache](https://trufflesuite.com/docs/ganache/).
+In the `client ` folder, run `npm run start` to start the local react server.
+
+For the other instructions in how to make the project work you your local machine, follow the steps on this [webiste](https://ethereum-blockchain-developer.com/060-tokenization/12-metamask-deployment/).   
+But before, install the [ganache](https://trufflesuite.com/docs/ganache/) blockchain development network. Double-check if the network config parameters in the `/truffle/truffle-config.js` under <i>ganache_local</i> are the same provided by ganache in your system.
 
 ### Running the project on Ganache🍫
-First, install ganache
+After, installing ganache, run the following commnad:
 ```sh
-sudo npm install -g ganache
+truffle migrate --network ganache_local
 ```
-Now, run ganache by writing in the terminal:
-```sh
-ganache
-```  
-On a separate terminal, run the following commnad:
-```sh
-truffle migrate --network ganache
-```
+The network configurations have already been added to the `truffle-config.js` file.
 
-### Interacting with the smart contract
-To interact with the smart contract deployed in the ganache network, first run following command:
-```sh
-truffle console --network ganache
-```
-This will open an interactive javascript console. For interacting with the smart contract, you can use [web3js](https://web3js.readthedocs.io/en/v1.10.0/). For example:
-```sh
-truffle(ganache)> const spacebear = await Spacebear.deployed()
-trufffle(ganache)> spacebear.name()
-```
-This example outputs the stored name of the NFT collection name.
-For further testing, you can execute in the same way other methods of the `Spacebear.sol` smart contract.
 
 <!-- CONTACT -->
 ## Contributing
